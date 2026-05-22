@@ -13,3 +13,5 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 templates = Jinja2Templates(directory="app/templates")
 
+app.include_router(auth_controller.router)
+
