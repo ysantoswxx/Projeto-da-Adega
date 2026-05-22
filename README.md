@@ -1,4 +1,4 @@
-# Instalar as bibliotcas
+#Instalar as bibliotcas
 
 no terminal :
 ``` bash
