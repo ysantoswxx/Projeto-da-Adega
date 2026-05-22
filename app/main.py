@@ -9,3 +9,7 @@ from app.controllers import auth_controller
 
 app = FastAPI(title="Sistema de Gerenciamento de Adega")
 
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+
+templates = Jinja2Templates(directory="app/templates")
+
