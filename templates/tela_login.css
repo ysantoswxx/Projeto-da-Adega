@@ -1,0 +1,129 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: white;
+}
+
+/* CONTAINER */
+.login-container {
+    width: 400px;
+    background: #171717;
+    border: 1px solid #242424;
+    border-radius: 14px;
+    padding: 40px 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* IMAGEM */
+.logo-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #FDE68A;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+/* TITULO */
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+p {
+    color: #9ca3af;
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* LABEL */
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* INPUT */
+.input-group input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #2c2c2c;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #9ca3af;
+}
+
+.input-group input:focus {
+    border-color: #FDE68A;
+    box-shadow: 0 0 10px rgba(253, 230, 138, 0.3);
+}
+
+/* BOTÃO */
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #FDE68A;
+    color: #111;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #fcd34d;
+    transform: translateY(-2px);
+}
+
+/* LINK */
+.forgot {
+    display: block;
+    margin-top: 30px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot:hover {
+    color: #FDE68A;
+}
+
+/* TEXTO FINAL */
+.footer-text {
+    margin-top: 30px;
+    color: #9ca3af;
+    font-size: 14px;
+}

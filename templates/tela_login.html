@@ -5,17 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Adega PDV</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="tela_login.css">
 </head>
 
 <body>
+
     <div class="login-container">
-        <h1>Adega PDV</h1>
-        <p>Bem-vindo ao sistema</p>
-        <div class="input-group"> <label>Usuário</label> <input type="text" placeholder="Digite seu usuário"> </div>
-        <div class="input-group"> <label>Senha</label> <input type="password" placeholder="Digite sua senha"> </div>
-        <button class="login-btn">Entrar</button> <a href="#" class="forgot">Esqueceu a senha?</a>
+
+        <!-- IMAGEM -->
+        <img src="logo.png" alt="Logo" class="logo-img">
+
+        <!-- TITULO -->
+        <h1>Bem-vindo</h1>
+
+        <!-- TEXTO -->
+        <p>Sistema PDV - Adega</p>
+
+        <!-- INPUT USUARIO -->
+        <div class="input-group">
+            <label>E-mail ou Usuário</label>
+            <input type="text" placeholder="Digite seu e-mail">
+        </div>
+
+        <!-- INPUT SENHA -->
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="Digite sua senha">
+        </div>
+
+        <!-- BOTÃO -->
+        <a href="tela_inicial.html" class="login-btn">
+            Entrar
+        </a>
+
+        <!-- LINK -->
+        <a href="#" class="forgot">
+            Esqueceu a senha?
+        </a>
+
+        <!-- TEXTO FINAL -->
+        <div class="footer-text">
+            Sistema de Ponto de Venda v1.0
+        </div>
+
     </div>
+
 </body>
 
 </html>
