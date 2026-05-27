@@ -1,34 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDV Adega</title>
-    <link rel="stylesheet" href="tela_inicial.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adega Premium</title>
+
+  <link rel="stylesheet" href="tela_inicial.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <header class="topbar">
-            <div class="logo"> Adega Premium </div>
-            <nav class="menu">
-                <a href="#">Ponto de Vendo</a>
-                <a href="#">Histórico de Vendas</a>
-                <a href="#">Gerenciamento de Produtos</a>
-            </nav>
-        </header>
 
-        <main class="main-content">
-            <section class="products-section">
-                <input type="text" placeholder="Buscar produtos">
-                <div class="categories"></div>
-                <div class="products-grid"></div>
-            </section>
-            <aside class="cart">
-                <h2>Carrinho</h2>
-            </aside>
-        </main>
+  <div class="container">
 
-    </div>
-    
+    <!-- MENU -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="icon">🍷</div>
+
+        <div>
+          <h2>Adega Premium</h2>
+          <p>Sistema PDV</p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#" class="active">🛒 Ponto de Venda</a>
+        <a href="#">📈 Histórico</a>
+        <a href="#">📦 Gerenciamento de Produtos</a>
+      </nav>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main">
+
+      <div class="top">
+        <input type="text" placeholder="Buscar produtos...">
+      </div>
+
+      <div class="categorias">
+        <button class="ativo">Todos</button>
+        <button>Cervejas</button>
+        <button>Refrigerantes</button>
+        <button>Combos</button>
+        <button>Kit Narguile</button>
+        <button>Bebidas</button>
+        <button>Ices</button>
+        <button>Salgadinhos</button>
+        <button>Doces</button>
+      </div>
+
+      <!-- ÁREA VAZIA -->
+      <div class="sem-produtos">
+
+        <h1>Nenhum produto cadastrado</h1>
+
+        <p>
+          Adicione produtos no gerenciamento para começar as vendas.
+        </p>
+
+      </div>
+
+    </main>
+
+    <!-- CARRINHO -->
+    <aside class="cart">
+
+      <h2>🛒 Carrinho</h2>
+
+      <div class="empty">
+        <h3>Carrinho vazio</h3>
+        <p>Adicione produtos para começar</p>
+      </div>
+
+    </aside>
+
+  </div>
+
 </body>
 </html>
