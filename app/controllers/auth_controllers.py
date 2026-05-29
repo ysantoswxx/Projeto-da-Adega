@@ -6,4 +6,5 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 
-from
+# from app.models.produtos import Produto
+
