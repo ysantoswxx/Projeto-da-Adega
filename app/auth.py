@@ -18,3 +18,68 @@ def hash_senha(senha: str):
 
 def verificar_senha(senha: str, hash_senha: str):
     return pwd_context.verify(senha, hash_senha)
+
+def criar_token(dados: dict):
+
+    payload = dados.copy()
+
+    #Define qaundo token expira
+    expira = datetime.now(timezone.utc) + timedelta(minutes=int(ACCES_TOKEN_EXPIRE_MINUTE))
+    payload.update({"exp": expira})
+
+    token = jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+
+    return token
+
+def decodificar_token(token: str):
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    return payload
+
+
+# função para usar nas rotas protegida
+def get_usuario_logado(request: Request):
+
+    token = request.cookies.get("access_token")
+
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Não autenticado"
+        )
+    try:
+        payload = decodificar_token(token)
+        email: str = payload.get("sub")
+
+        if not email:
+            raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token invalido"
+        )
+        
+        return payload
+    except JWTError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token invalido ou expirado"
+        )
+    
+def get_usuario_opcional(request: Request):
+    try:
+        return get_usuario_logado(request)
+    except HTTPException:
+        return None
+    
+
+# Depndencia que exisge login e perfil de admin
+def get_admin(request: Request):
+    
+    usuario = get_usuario_logado(request)
+
+    #Validar o admin
+    if usuario.get("role") != "admin":
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Acesso restrito a administradores."
+        )
+    else:
+        return usuario
