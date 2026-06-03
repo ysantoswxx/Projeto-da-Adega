@@ -112,7 +112,7 @@ def criar_usuario(
     novo = Usuario(
         nome=nome,
         email=email,
-        senah_hash=hash_senha(senha),
+        senha_hash=hash_senha(senha),
         role=role,
     )
 
