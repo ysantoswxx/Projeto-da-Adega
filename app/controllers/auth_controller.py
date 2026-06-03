@@ -60,7 +60,7 @@ def fzer_cadastro(
     novo_usuario = Usuario(
         nome=nome,
         email=email,
-        senah_hash=hash_senha(senha)  # Armazenar a senha de forma segura (hash)
+        senha_hash=hash_senha(senha)  # Armazenar a senha de forma segura (hash)
     )
 
     # Salvar o usuário no banco de dados
@@ -82,7 +82,7 @@ def fazer_login(
 
     # 2. Verificar a senha com bcrypt
     senha_correta = (
-        usuario is not None and verificar_senha(senha, usuario.senah_hash)
+        usuario is not None and verificar_senha(senha, usuario.senha_hash)
     )
     if not senha_correta:
         return templates.TemplateResponse(
