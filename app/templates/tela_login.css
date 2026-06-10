@@ -127,3 +127,9 @@ p {
     color: #9ca3af;
     font-size: 14px;
 }
+.footer-text a {
+    color: #FDE68A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
